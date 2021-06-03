@@ -24,6 +24,7 @@ public class Jogos {
         Statement stmt = conexao.createStatement();
         ResultSet rs = stmt.executeQuery("select * from Jogo");
         while (rs.next()) {
+            System.out.println("Exibindo jogos: ");
             System.out.println ("Id: " + rs.getInt("id") + " - " + "Nome : " + rs.getString("NomeDoJogo") + " - " + "Idade: " + rs.getInt("IdadeDoJogo") + " - " + "Categoria: " + rs.getInt("CategoriaDoJogo"));
         }
     }
@@ -50,7 +51,7 @@ public class Jogos {
            Statement stmt = conexao.createStatement();
            String SQL = " DELETE FROM Jogo "+ " WHERE NomeDoJogo = " + nome;
            stmt.executeUpdate(SQL);
-           System.out.println("Jogo adicionado com sucesso!!");
+           System.out.println("Jogo removido com sucesso!!");
            }
        
        public void ApagarJogoCat(int cat) throws
@@ -58,7 +59,7 @@ public class Jogos {
            Statement stmt = conexao.createStatement();
            String SQL = " DELETE FROM Jogo "+ " WHERE CategoriaDoJogo = " + cat;
            stmt.executeUpdate(SQL);
-           System.out.println("Jogo adicionado com sucesso!!");
+           System.out.println("Jogo removido com sucesso!!");
            }
     
 }
