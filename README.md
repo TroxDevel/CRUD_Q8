@@ -26,6 +26,5 @@ Microsoft .NET Framework						4.0.30319.42000
 
 Sistema Operacional						10.0.19042
 													
-Consultas foram anexadas a este repositório.
 
 
